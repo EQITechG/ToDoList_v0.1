@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+
+
+
+    <%# EJS has different tags, e.g: a Scriplet tag that can be used for control flow inide the HTML/EJS file %>
+
+    <%# So to change the styles color for the days of week, the tag will go on all JS like codes, but never on the HTML Codes %>
+
+<% if (typeOfDay === "Monday"){ %>
+
+    <h1 style="color: red"><%= typeOfDay %> ToDo List</h1>
+<% } else{  %>
+    <h1 style="color: blue"><%= typeOfDay %> ToDo List</h1>
+
+    <%  }  %>
+
+    <%# Note that comment tags are different in EJS as opposed to HTML, and if the comment tags of a HTML file was used, the code will not run. %>
+
+
+
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+
+
+  <h1> <%= typeOfDay %> </h1>
+
+  <ul>
+<li>Breakfast</li> 
+<li>Lunch</li> 
+<li>Dinner</li> 
+<li> <%= enterToDo %> </li>   // This was brought here because the original code needs a for loop.
+  </ul>
+<form action="/" method="POST">
+<label for="todo"></label>
+<input type="text" name="todo" id="">
+<button type="submit">Add ToDo List</button>
+</form>
+    
+</body>
+</html>
